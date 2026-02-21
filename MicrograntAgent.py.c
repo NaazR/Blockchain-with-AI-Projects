@@ -12,52 +12,7 @@ PRIVATE_KEY = ""         # Your MetaMask Private Key (Secret!)
 CONTRACT_ADDRESS = "    # The address from Remix "Deployed Contracts"
 
 # Simplified ABI for the 'awardGrant' function
-CONTRACT_ABI = [
-        {
-                "inputs": [
-                        {
-                                "internalType": "address payable",
-                                "name": "student",
-                                "type": "address"
-                        },
-                        {
-                                "internalType": "string",
-                                "name": "reason",
-                                "type": "string"
-                        }
-                ],
-                "name": "awardGrant",
-                "outputs": [],
-                "stateMutability": "payable",
-                "type": "function"
-        },
-        {
-                "anonymous": False,
-                "inputs": [
-                        {
-                                "indexed": True,
-                                "internalType": "address",
-                                "name": "student",
-                                "type": "address"
-                        },
-                                               {
-                                                "indexed": False,
-                                "internalType": "uint256",
-                                "name": "amount",
-                                "type": "uint256"
-                        },
-                        {
-                                "indexed": False,
-                                "internalType": "string",
-                                "name": "reason",
-                                "type": "string"
-                        }
-                ],
-                "name": "GrantIssued",
-                "type": "event"
-        }
-]
-
+CONTRACT_ABI = [ your ABI code after executing the smart contract]
 # --- 2. INITIALIZATION ---
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-3-flash-preview')
